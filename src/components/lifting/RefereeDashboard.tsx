@@ -2,14 +2,7 @@
 
 import React, { useEffect, useState, useCallback } from "react";
 import Chrono from "./Chrono";
-import {
-  getSocket,
-  emitResetVotes,
-  emitStateUpdate,
-  emitJudgeVote,
-  emitManualOverride,
-  emitResetSpecificJudge,
-} from "../../socket/socketClient";
+import { getSocket, emitResetVotes, emitStateUpdate, emitJudgeVote } from "../../socket/socketClient";
 
 interface AthleteInfo {
   name?: string;

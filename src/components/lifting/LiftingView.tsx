@@ -38,7 +38,7 @@ import { liftToAttemptFieldName } from "../../logic/entry";
 
 import { Entry, Flight, Language, Lift } from "../../types/dataTypes";
 import { GlobalState, MeetState, LiftingState } from "../../types/stateTypes";
-import { emitSyncReduxState, emitStateUpdate, emitUpdateCurrentLift, getSocket } from "../../socket/socketClient";
+import { emitSyncReduxState, emitUpdateCurrentLift, getSocket } from "../../socket/socketClient";
 import { markLift } from "../../actions/liftingActions";
 import { Dispatch } from "redux";
 
@@ -64,7 +64,26 @@ interface InternalState {
   replaceTableWithWeighins: boolean;
 }
 
+interface LastEmittedLiftState {
+  athleteId?: number;
+  athleteName?: string;
+  liftType?: string;
+  attemptNumber?: number;
+  weightKg?: number;
+  currentAthlete?: {
+    name?: string;
+    bodyweightKg?: number;
+    category?: string;
+    lot?: number;
+    team?: string;
+    athletePhotoUrl?: string;
+    clubLogoUrl?: string;
+  };
+}
+
 class LiftingView extends React.Component<Props, InternalState> {
+  private lastEmittedLiftState: LastEmittedLiftState | null = null;
+
   constructor(props: Props) {
     super(props);
     this.toggleReplaceTableWithWeighins = this.toggleReplaceTableWithWeighins.bind(this);
@@ -113,28 +132,83 @@ class LiftingView extends React.Component<Props, InternalState> {
   emitCurrentLifterState = (): void => {
     const now = getLiftingOrder(this.props.entriesInFlight, this.props.lifting);
     if (now.currentEntryId == null) {
-      emitStateUpdate({
-        currentAthlete: null,
-        currentLift: this.props.lifting.lift,
-        currentAttempt: now.attemptOneIndexed,
-        requestedWeightKg: 0,
-      });
+      if (this.lastEmittedLiftState) {
+        emitUpdateCurrentLift({
+          athleteId: this.lastEmittedLiftState.athleteId,
+          athleteName: this.lastEmittedLiftState.athleteName,
+          liftType: this.lastEmittedLiftState.liftType ?? this.props.lifting.lift,
+          attemptNumber: this.lastEmittedLiftState.attemptNumber ?? now.attemptOneIndexed,
+          weightKg: this.lastEmittedLiftState.weightKg ?? 0,
+        });
+      } else {
+        emitUpdateCurrentLift({
+          liftType: this.props.lifting.lift,
+          attemptNumber: now.attemptOneIndexed,
+          weightKg: 0,
+        });
+      }
       return;
     }
 
     const entry = this.props.entriesInFlight.find((x) => x.id === now.currentEntryId);
     const weightKg = entry ? entry[liftToAttemptFieldName(this.props.lifting.lift)][now.attemptOneIndexed - 1] : 0;
-    emitUpdateCurrentLift({
+    const payload: LastEmittedLiftState = {
       athleteId: entry?.id,
       athleteName: entry?.name,
       liftType: this.props.lifting.lift,
       attemptNumber: now.attemptOneIndexed,
       weightKg,
-    });
+      currentAthlete:
+        entry && entry.id != null
+          ? {
+              name: entry.name,
+              bodyweightKg: entry.bodyweightKg,
+              category: entry.sex,
+              lot: entry.lot,
+              team: entry.team,
+              athletePhotoUrl: entry.athletePhotoUrl,
+              clubLogoUrl: entry.clubLogoUrl,
+            }
+          : undefined,
+    };
+    this.lastEmittedLiftState = payload;
+    emitUpdateCurrentLift(payload);
   };
 
   render() {
     const now = getLiftingOrder(this.props.entriesInFlight, this.props.lifting);
+    const displayCurrentAthlete =
+      now.currentEntryId != null
+        ? (() => {
+            const e = this.props.entriesInFlight.find((x) => x.id === now.currentEntryId);
+            return e
+              ? {
+                  name: e.name,
+                  bodyweightKg: e.bodyweightKg,
+                  category: e.sex,
+                  lot: e.lot,
+                  team: e.team,
+                  athletePhotoUrl: e.athletePhotoUrl,
+                  clubLogoUrl: e.clubLogoUrl,
+                }
+              : null;
+          })()
+        : this.lastEmittedLiftState?.currentAthlete ?? null;
+
+    const displayRequestedWeightKg =
+      now.currentEntryId != null
+        ? (() => {
+            const e = this.props.entriesInFlight.find((x) => x.id === now.currentEntryId);
+            if (!e) return 0;
+            const lift = this.props.lifting.lift;
+            const arr = lift === "S" ? e.squatKg : lift === "B" ? e.benchKg : e.deadliftKg;
+            return arr[now.attemptOneIndexed - 1] || 0;
+          })()
+        : this.lastEmittedLiftState?.weightKg ?? 0;
+
+    const displayCurrentLift = this.lastEmittedLiftState?.liftType ?? this.props.lifting.lift;
+    const displayCurrentAttempt = this.lastEmittedLiftState?.attemptNumber ?? now.attemptOneIndexed;
+
     let rightElement = null;
     if (this.state.replaceTableWithWeighins === false) {
       rightElement = (
@@ -176,37 +250,10 @@ class LiftingView extends React.Component<Props, InternalState> {
           <div style={{ margin: "0 0 8px 0" }}>
             <RefereeDashboard
               mode={(this.props.meet.competitionMode as "Standard" | "Handicap") || "Standard"}
-              currentAthlete={
-                now.currentEntryId != null
-                  ? (() => {
-                      const e = this.props.entriesInFlight.find((x) => x.id === now.currentEntryId);
-                      return e
-                        ? {
-                            name: e.name,
-                            bodyweightKg: e.bodyweightKg,
-                            category: e.sex,
-                            lot: e.lot,
-                            team: e.team,
-                            athletePhotoUrl: e.athletePhotoUrl,
-                            clubLogoUrl: e.clubLogoUrl,
-                          }
-                        : null;
-                    })()
-                  : null
-              }
-              requestedWeightKg={
-                now.currentEntryId != null
-                  ? (() => {
-                      const e = this.props.entriesInFlight.find((x) => x.id === now.currentEntryId);
-                      if (!e) return 0;
-                      const lift = this.props.lifting.lift;
-                      const arr = lift === "S" ? e.squatKg : lift === "B" ? e.benchKg : e.deadliftKg;
-                      return arr[now.attemptOneIndexed - 1] || 0;
-                    })()
-                  : 0
-              }
-              currentLift={this.props.lifting.lift}
-              currentAttempt={now.attemptOneIndexed}
+              currentAthlete={displayCurrentAthlete}
+              requestedWeightKg={displayRequestedWeightKg}
+              currentLift={displayCurrentLift}
+              currentAttempt={displayCurrentAttempt}
             />
           </div>
 
