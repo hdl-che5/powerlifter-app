@@ -1,0 +1,231 @@
+// vim: set ts=2 sts=2 sw=2 et:
+//
+// This file is part of OpenLifter, simple Powerlifting meet software.
+// Copyright (C) 2019 The OpenPowerlifting Project.
+//
+// This program is free software: you can redistribute it and/or modify
+// it under the terms of the GNU Affero General Public License as
+// published by the Free Software Foundation, either version 3 of the
+// License, or (at your option) any later version.
+//
+// This program is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU Affero General Public License for more details.
+//
+// You should have received a copy of the GNU Affero General Public License
+// along with this program.  If not, see <https://www.gnu.org/licenses/>.
+
+// Theming for the bar load
+// Theming for the current lifter information header on the top of the Lifting page.
+
+$color-dark: #232323;
+$color-light: #ffffff;
+
+$plate-font-size: 23px;
+$plate-margin-right: 5px;
+$plate-width: 30px;
+
+$maximum-plate-height: 80%;
+
+// React doesn't have a default way to supply multiple classes to an element.
+// So instead we just use a macro to repeat the defaults everywhere.
+@mixin plate-defaults() {
+  display: flex;
+  flex-direction: column; // Handles the case of multiple internal textual <div>s.
+  align-items: center; // Vertical alignment.
+  justify-content: center; // Horizontal alignment.
+
+  width: $plate-width;
+  margin-right: $plate-margin-right;
+}
+
+// Stakes out an area for the BarLoad widget.
+div.container {
+  position: relative; // Needed for the absolute positioning of the rackInfo.
+
+  display: flex;
+  align-items: center;
+
+  height: 200px;
+  min-width: 200px;
+
+  // Default styling for the plate text.
+  color: $color-light;
+  font-size: $plate-font-size;
+  font-weight: bold;
+}
+
+// Rack information text, but editable.
+div.rackInfo {
+  color: $color-dark;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+
+  font-size: 25px;
+  text-align: right;
+
+  // Undo decoration.
+  border: none;
+  background-color: inherit;
+  padding: 0px;
+}
+
+// Styling for the bar.
+div.bar {
+  width: $plate-width;
+  height: 10%;
+  background-color: #333333;
+}
+
+// Styling for a single 50kg plate.
+div.kg50 {
+  @include plate-defaults();
+  height: $maximum-plate-height;
+  width: $plate-width * 1.5;
+}
+
+// Styling for a single 25kg plate.
+div.kg25 {
+  @include plate-defaults();
+  height: $maximum-plate-height;
+}
+
+// Styling for a single 20kg plate.
+div.kg20 {
+  @include plate-defaults();
+  height: $maximum-plate-height;
+}
+
+// Styling for a single 15kg plate.
+div.kg15 {
+  @include plate-defaults();
+  height: $maximum-plate-height * 0.9;
+}
+
+// Styling for a single 10kg plate.
+div.kg10 {
+  @include plate-defaults();
+  height: $maximum-plate-height * 0.8;
+}
+
+// Styling for a single 5kg plate.
+div.kg5 {
+  @include plate-defaults();
+  height: $maximum-plate-height * 0.7;
+}
+
+// Styling for a single 2.5kg plate.
+div.kg2p5 {
+  @include plate-defaults();
+  height: $maximum-plate-height * 0.6;
+}
+
+// Styling for a single 1.25kg plate.
+div.kg1p25 {
+  @include plate-defaults();
+  height: $maximum-plate-height * 0.5;
+}
+
+// Styling for a single 1kg plate.
+div.kg1 {
+  @include plate-defaults();
+  height: $maximum-plate-height * 0.45;
+}
+
+// Styling for a single 0.5kg plate.
+div.kg0p75 {
+  @include plate-defaults();
+  height: $maximum-plate-height * 0.4;
+}
+
+// Styling for a single 0.5kg plate.
+div.kg0p5 {
+  @include plate-defaults();
+  height: $maximum-plate-height * 0.3;
+}
+
+// Styling for a single 0.25kg plate.
+div.kg0p25 {
+  @include plate-defaults();
+  height: $maximum-plate-height * 0.2;
+}
+
+// Styling for a single 100lb plate.
+div.lbs100 {
+  @include plate-defaults();
+  height: $maximum-plate-height;
+  width: $plate-width * 1.5;
+}
+
+// Styling for a single 55lb plate.
+div.lbs55 {
+  @include plate-defaults();
+  height: $maximum-plate-height;
+  width: $plate-width * 1.2;
+}
+
+// Styling for a single 45lb plate.
+div.lbs45 {
+  @include plate-defaults();
+  height: $maximum-plate-height;
+}
+
+// Styling for a single 35lb plate.
+div.lbs35 {
+  @include plate-defaults();
+  height: $maximum-plate-height * 0.9;
+}
+
+// Styling for a single 25lb plate.
+div.lbs25 {
+  @include plate-defaults();
+  height: $maximum-plate-height * 0.8;
+}
+
+// Styling for a single 10lb plate.
+div.lbs10 {
+  @include plate-defaults();
+  height: $maximum-plate-height * 0.7;
+}
+
+// Styling for a single 5lb plate.
+div.lbs5 {
+  @include plate-defaults();
+  height: $maximum-plate-height * 0.6;
+}
+
+// Styling for a single 2.5lb plate.
+div.lbs2p5 {
+  @include plate-defaults();
+  height: $maximum-plate-height * 0.5;
+}
+
+// Styling for a single 1.25lb plate.
+div.lbs1p25 {
+  @include plate-defaults();
+  height: $maximum-plate-height * 0.4;
+}
+
+// Styling for a single 0.5lb plate.
+div.lbs0p5 {
+  @include plate-defaults();
+  height: $maximum-plate-height * 0.3;
+}
+
+// Styling for a collar.
+div.collar {
+  @include plate-defaults();
+  margin-right: 0px;
+  height: 14%;
+  background-color: gray;
+}
+
+// Styling for an error.
+div.error {
+  @include plate-defaults();
+  height: 14%;
+  width: $plate-width * 2;
+  background-color: red;
+}

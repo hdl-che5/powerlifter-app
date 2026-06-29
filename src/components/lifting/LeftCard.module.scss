@@ -1,0 +1,84 @@
+// vim: set ts=2 sts=2 sw=2 et:
+//
+// This file is part of OpenLifter, simple Powerlifting meet software.
+// Copyright (C) 2019 The OpenPowerlifting Project.
+//
+// This program is free software: you can redistribute it and/or modify
+// it under the terms of the GNU Affero General Public License as
+// published by the Free Software Foundation, either version 3 of the
+// License, or (at your option) any later version.
+//
+// This program is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU Affero General Public License for more details.
+//
+// You should have received a copy of the GNU Affero General Public License
+// along with this program.  If not, see <https://www.gnu.org/licenses/>.
+
+// Theming for the cards on the left of the Lifting page.
+
+$color-dark: #232323;
+$color-light: #ffffff;
+
+$border-rounding: 8px;
+
+// The whole left card.
+div.container {
+  width: 100%;
+
+  color: $color-dark;
+}
+
+// The current loading, looking like a "card" to stand out.
+div.activeCard {
+  width: 100%;
+  margin-bottom: 10px;
+
+  background-color: $color-light;
+
+  border-radius: $border-rounding;
+  box-shadow: 0 0 20px 0 hsla(0, 0%, 64%, 0.45);
+}
+
+// The bar containing loading information.
+div.loadingBar {
+  color: $color-dark;
+
+  border-bottom-left-radius: $border-rounding;
+  border-bottom-right-radius: $border-rounding;
+}
+
+// Textual description of the attempt and the weight on the bar.
+div.attemptText {
+  width: 100%;
+  padding: 5px 10px 5px 20px;
+
+  background-color: $color-dark;
+  color: $color-light;
+
+  font-size: 44px;
+  font-weight: bold;
+
+  border-top-left-radius: $border-rounding;
+  border-top-right-radius: $border-rounding;
+}
+
+// Restricts the area available for the bar, for padding purposes.
+div.barArea {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+// The "NEXT" label for the next bar load.
+div.nextText {
+  font-size: 25px;
+  font-weight: bold;
+  padding-left: 10px;
+  padding-top: 20px;
+
+  // Handle long lifter names by cutting them off.
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

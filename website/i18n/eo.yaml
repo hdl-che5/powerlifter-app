@@ -1,0 +1,302 @@
+header.about:
+  # Please use just one short word. Otherwise the site layout breaks.
+  other: Detaloj
+header.guide:
+  # Please use just one short word. Otherwise the site layout breaks.
+  other: Gvidilo
+header.support:
+  # Please use just one short word. Otherwise the site layout breaks.
+  other: Asisto
+header.source:
+  # Please use just one short word. Otherwise the site layout breaks.
+  other: Fontkodo
+footer.other-languages-intro:
+  other: Nia retejo en aliaj lingvoj
+index.html-title:
+  other: OpenLifter
+index.html-meta-description:
+  other: Fortega softvaro por konkursoj, de OpenPowerlifting
+index.html-meta-keywords:
+  other: konkurso softvaro,fortego programo
+index.main-pitch:
+  other: <b>OpenLifter</b> estas simpla konkurso-softvaro kiu ĉie funkcias rapide, fideble, kaj plaĉe.
+index.run-button:
+  other: Lanĉu OpenLifter <span>{{ .Count }}</span>
+index.all-releases:
+  other: Ĉiuj Versioj
+index.feature-list-introduction:
+  other: Funkciaro
+index.feature-next-up-bar-loading:
+  other: sekvanta platordo
+index.feature-automatic-saving:
+  other: aŭtomata konservo
+index.feature-no-crashing:
+  other: neniom da kraŝoj
+index.feature-no-excel-license:
+  other: neniom da excel
+index.feature-full-offline-functionality:
+  other: plenloka reĝimo
+index.feature-audience-readable-text:
+  other: klara, granda teksto
+index.feature-instant-results:
+  other: tujaj rezultoj
+index.feature-rule-support:
+  other: multfederaciaj reguloj
+about.html-title:
+  other: Pri OpenLifter
+about.html-description:
+  other: Komparo de OpenLifter kaj aliaj softvaroj
+about.html-keywords:
+  other: openlifter komparo
+about.comparison-chart:
+  other: Kompara Diagramo
+about.comparison-intro-1:
+  other: Jen simpla diagramo por kompari OpenLifter kun aliaj programoj.
+about.comparison-intro-2:
+  other: Ni kreis la sekvantan komparan diagramon kune kun la kreitulo de LiftingCast, kaj ni kredas, ke ĝi akuratas.
+about.table-header-openlifter:
+  other: OpenLifter
+about.table-header-liftingcast:
+  other: LiftingKast
+about.table-header-nextlifter:
+  other: NextLifter
+about.table-header-ironcomp:
+  other: IronKomp
+about.table-row-homepage:
+  other: Retejo
+about.table-row-homepage-none:
+  other: Neniu
+about.table-row-license:
+  other: Licenco
+about.table-row-license-agplv3p:
+  other: Libera (AGPLv3+)
+about.table-row-license-freeware:
+  other: Ĉiesaĵo
+about.table-row-license-proprietary:
+  other: Proprieta
+about.table-row-cost:
+  other: Kosto
+about.table-row-cost-free:
+  other: Senkosta
+about.table-row-cost-liftingcast:
+  other: Premie ($0.75 per Ulo)
+about.table-row-cost-excel:
+  other: Excel ($70 per Jaro)
+about.table-row-runs-on:
+  other: Kie Funkcias
+about.table-row-runs-on-any-browser:
+  other: Ajna Retumilo
+about.table-row-runs-on-chrome:
+  other: Nur Chrome
+about.table-row-runs-on-excel:
+  other: Microsoft Excel
+about.table-row-runs-on-windows-mac:
+  other: Windows kaj macOS
+about.table-row-languages:
+  other: Lingvoj
+about.table-row-languages-many:
+  other: Multaj
+about.table-row-languages-english-only:
+  other: Nur la Angla
+about.table-row-works-offline:
+  other: Loka Funkcio
+about.table-row-screens-needed:
+  other: Ekranoj Bezonaj
+about.table-row-screens-needed-1-per:
+  other: 1 po Estrado
+about.table-row-screens-needed-2p-per:
+  other: 2+ po Estrado
+about.table-row-federations:
+  other: Federacioj
+about.table-row-federations-all:
+  other: Ĉiuj Fedoj
+about.table-row-federations-ipl-only:
+  other: Nur IPL
+about.table-row-scoreboard:
+  other: Reta Poentotabulo
+about.table-row-generic-yes-premium:
+  other: Jes (Premie)
+about.table-row-generic-no:
+  other: "Ne"
+about.table-row-generic-yes:
+  other: "Jes"
+about.table-row-multi-platform:
+  other: Multaj Estradoj
+about.table-row-multi-platform-yes-usb:
+  other: Jes (USB Memorilo)
+about.table-row-autosave:
+  other: Aŭtokonservado
+about.table-row-training:
+  other: Trejnado Bezona
+about.table-row-training-minimal:
+  other: Minimuma
+about.table-row-training-moderate:
+  other: Modera
+about.table-row-training-moderate-issues:
+  other: Modera (Atentindaĵoj)
+about.table-row-training-significant:
+  other: Signifa
+about.table-row-registration:
+  other: Registriĝo
+about.table-row-registration-csv:
+  other: Aŭtomata (CSV)
+about.table-row-registration-premium:
+  other: Aŭtomata (Premie)
+about.table-row-registration-manual:
+  other: Mana
+about.about-section:
+  other: Pri OpenLifter
+about.start-info:
+  other: La projekton OpenLifter je novembro 2018 kreis <a href="https://www.openpowerlifting.org">la OpenPowerlifting teamo</a> por plifaciligi la funkciadon de konkurso-softvaro.
+about.design-header:
+  other: Ni kreis OpenLifter por...
+about.design-goal-1:
+  other: esti la unua libra kaj nefermita fontteksta konkurso-softvaro;
+about.design-goal-2:
+  other: havi simplan fasadon kaj ne bezoni trejnadon;
+about.design-goal-3:
+  other: ne kraŝi per uzi simplan internan strukturon;
+about.design-goal-4:
+  other: funkcii kun unu projekcilo kaj unu malkara komputilo;
+about.design-goal-5:
+  other: legebligi la projekciitan ekranon por la spektantoj.
+about.closing-text:
+  other: Nia teamo havas spertecon pri la funkciado de konkursoj por multaj jaroj. OpenLifter estas nia revo-softvaro.
+guide.html-title:
+  other: OpenLifter Gvidilo
+guide.html-meta-description:
+  other: OpenLifter Video Walkthrough and FAQ
+guide.html-meta-keywords:
+  other: openlifting gvidilo,openlifter fakdosiero,openlifter lernilo
+guide.faq-section:
+  other: Fakdosiero
+guide.faq-pounds-question:
+  other: Ĉu OpenLifter permesas uzi funtojn?
+guide.faq-pounds-answer:
+  other: Certe.
+guide.faq-multiple-divisions-question:
+  other: Ĉu unu konkursanto povas konkursi en multoblaj divizioj aŭ eventoj?
+guide.faq-multiple-divisions-answer:
+  other: Jes. En la paĝo por registriĝo, la Divizioj kaj Eventoj tekstujoj akceptas multoblajn aĵojn por unu konkursanto. La unua divizio aperos en la paĝo por la konkurso.
+guide.faq-multiple-platforms-question:
+  other: Ĉu la konkurso povas uzi multoblajn estradojn?
+guide.faq-multiple-platforms-answer:
+  other: Yes. You'll need some way to transfer files between computers, usually with a USB key. Set up the competition and register all the lifters on one computer, then Save from the Home screen. Transfer that save file to the computers next to each platform, and Load it into OpenLifter. Once lifting is over, the Results screen will then have Export and Merge buttons for each platform. Use the USB key to merge in the exported files. Then you'll have all the results on one computer and the results will include all platforms.
+guide.faq-changing-registration-later-question:
+  other: If I change registration stuff after lifting started, will everything explode?
+guide.faq-changing-registration-later-answer:
+  other: Nothing will explode. OpenLifter lets you change anything at any time and will do the right thing.
+guide.faq-rack-heights-question:
+  other: How do I mark bench safety heights? What about squat rack in/out?
+guide.faq-rack-heights-answer:
+  other: On the Weigh-ins page, the "Squat Rack" and "Bench Rack" inputs accept freeform text, not just numbers. Most commonly, a bench rack height of 5 with a safety weight of 3 is written as "5/3", but you can use whatever notation your loading crew prefers. Similarly for the squat rack, you can enter "15in".
+guide.faq-fixing-lifts-question:
+  other: Kiel ripari provon, kiu misregistritas?
+guide.faq-fixing-lifts-answer:
+  other: Use the controls in the lower-left corner of the Lifting page to reselect that lifter, and then click the No Lift or Good Lift button to change it.
+guide.faq-changing-rack-heights-question:
+  other: How do I change rack heights? What about the next flight's openers?
+guide.faq-changing-rack-heights-answer:
+  other: On the Lifting page, click the "Toggle Weigh-ins" button. That will embed the Weigh-ins page into the Lifting page, so you can change all that stuff and keep the loading projected. When you're done changing things, click the "Toggle Weigh-ins" button again to switch back.
+guide.faq-saving-frequency-question:
+  other: How often should I save to a file?
+guide.faq-saving-frequency-answer:
+  other: A good rule of thumb is to save to a file right before you go to close OpenLifter.</p><p>OpenLifter auto-saves into browser memory after every change. If you accidentally close the browser, everything will still be there when you reopen it. But if you don't use OpenLifter for a few days, browsers are allowed to forget things, so it might forget about your competition (although that's unlikely). If you want to guarantee that the competition is still there a few days from now, save it to a file. Can't hurt.
+guide.faq-lifting-text-question:
+  other: The text on the Lifting page is way too big!
+guide.faq-lifting-text-answer:
+  other: Use your browser's "Zoom In" and "Zoom Out" buttons to fit things to your screen. Most browsers will also let you change zoom settings by holding Ctrl and scrolling the mouse wheel.
+guide.faq-results-text-question:
+  other: The text on the Results page is way too small!
+guide.faq-results-text-answer:
+  other: Use the same browser "Zoom In" and "Zoom Out" features to get things to fit. If you make the text really big, you can fit it to your projector and put on an impromptu slideshow at the end of the competition. Audiences seem to like that because it gives them something to look at.
+guide.faq-auto-import-registration-question:
+  other: Can I auto-import lifter details into the registration page?
+guide.faq-auto-import-registration-answer:
+  other: Yes, by exporting your data into a special CSV importation format. At the top of the Registration page, there is a button for downloading a template, so you can learn what that format looks like by example. If the format doesn't match what we expect, it will give you a helpful error message. Once you learn (by trial and error) what the program is expecting, the next time should be really easy.
+guide.faq-online-scoresheet-question:
+  other: Is there an online scoresheet?
+guide.faq-online-scoresheet-answer:
+  other: There is not. Once OpenLifter is launched, it's entirely offline. It runs on your computer, not on our server.
+guide.faq-third-sex-question:
+  other: I see M, F, and Mx weight classes. What's Mx?
+guide.faq-third-sex-answer:
+  other: Mx (pronounced <i>Muks</i>) is <a href="https://en.wikipedia.org/wiki/Mx_(title)">a gender-neutral title</a> &mdash; like Mr and Ms &mdash; originating from the UK.</p><p>Most federations require lifters to compete in either the male or female categories. Some federations additionally allow lifters to enter a third category. Mx is all-inclusive. It can include non-binary lifters without forcing assignation into the standard dichotomy.</p><p>If you wanted to run a competition where men and women are all competing together, you could put everyone into the Mx category.
+guide.faq-openpowerlifting-results-question:
+  other: Does this auto-submit results to OpenPowerlifting?
+guide.faq-openpowerlifting-results-answer:
+  other: No. OpenPowerlifting requires the sanctioning federation to certify the results, so results can't be received directly. However, if you click the "Export for OpenPowerlifting" button on the Results page, it will download the results in a format that is <i>really</i> convenient for us. If you'd like to make our lives easier, <a href="https://www.openpowerlifting.org/contact">sending in those files</a> would be helpful. We can add them after the sanctioning body approves them.
+guide.faq-warmup-room-question:
+  other: How do I set up monitors for the warmup room?
+guide.faq-warmup-room-answer:
+  other: Use desktop sharing software for your local network, and then share the screen. Chat programs with screen sharing features will work too.
+support.html-title:
+  other: OpenLifter Apogo
+support.html-meta-description:
+  other: Apogado kaj laŭplaĉigaj opcioj
+support.html-meta-keywords:
+  other: openlifter apogo,openlifter helpo,openlifter trejnado
+support.support-section:
+  other: Oficiala Apogo
+support.no-warranty:
+  other: OpenLifter is free and open source, but does not come with a warranty or support.
+support.we-have-services:
+  other: If you would like technical support for your meet, we offer several services &mdash; from walking you through the software and making sure things are set up correctly, all the way to in-person score table direction and training for your staff.
+support.contact-us-button:
+  other: Kontaktu nin
+support.customization-header:
+  other: Laŭplaĉigoj
+support.customization-subheader:
+  other: Get a version of OpenLifter specifically for your meet
+support.customization-item-logo:
+  other: Have your logo projected!
+support.customization-item-branding:
+  other: Your own branding
+support.customization-item-features:
+  other: Custom features
+support.customization-item-desktop:
+  other: Desktop versions
+support.customization-item-cost:
+  other: Starting at US$75
+support.customization-email-subject:
+  other: Custom Version Inquiry
+support.online-header:
+  other: Online Support
+support.online-subheader:
+  other: Run a meet with complete technical confidence
+support.online-item-training:
+  other: Training for your staff
+support.online-item-email:
+  other: Unlimited e-mail support
+support.online-item-phone:
+  other: Meet-day phone support
+support.online-item-cost:
+  other: Starting at US$120
+support.online-email-subject:
+  other: Online Support Inquiry
+support.in-person-header:
+  other: Proprapersona apogo
+support.in-person-subheader:
+  other: Have the OpenPowerlifting team run your score table
+support.in-person-item-everything:
+  other: Ni faros ĉion!
+support.in-person-item-training:
+  other: Ni ankaŭ trejnos vian dungitaron
+support.in-person-item-worldwide:
+  other: Disponata tutmonde
+support.in-person-item-cost:
+  other: Pricing varies based on cost of travel, please inquire
+support.in-person-email-subject:
+  other: In-Person Support
+releases.html-title:
+  other: OpenLifter Versioj
+releases.html-meta-description:
+  other: Ĉiuj versioj de OpenLifter, eĉ la malnovaj
+releases.html-meta-keywords:
+  other: openlifter malnovaj versioj
+releases.in-development:
+  other: In Development
+releases.major-changes-in-the-next-version:
+  other: Major Changes Coming in the Next Version
+releases.changelog-initial-public-release:
+  other: Unua publika versio.

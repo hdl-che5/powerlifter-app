@@ -1,0 +1,306 @@
+header.about:
+  # Please use just one short word. Otherwise the site layout breaks.
+  other: Описание
+header.guide:
+  # Please use just one short word. Otherwise the site layout breaks.
+  other: Справочник
+header.support:
+  # Please use just one short word. Otherwise the site layout breaks.
+  other: Обслуживание
+header.source:
+  # Please use just one short word. Otherwise the site layout breaks.
+  other: Код
+footer.other-languages-intro:
+  other: Наш сайт на других языках
+index.html-title:
+  other: OpenLifter
+index.html-meta-description:
+  other: Мощное программное обеспечение для организации соревнований от OpenPowerlifting
+index.html-meta-keywords:
+  other: программное обеспечение для организации соревнований й по пауэрлифтингу
+index.main-pitch:
+  other: <b>OpenLifter</b> &mdash; это пауэрлифтинговое программное обеспечение, которое работает молниеносно быстро, работает везде и приносит радость использования.
+index.run-button:
+  other: Запустить OpenLifter <span>{{ .Count }}</span>
+index.all-releases:
+  other: Все выпуски
+index.feature-list-introduction:
+  other: Особенности
+index.feature-next-up-bar-loading:
+  other: загрузка следующей штанги
+index.feature-automatic-saving:
+  other: автоматическое сохранение
+index.feature-no-crashing:
+  other: без рушений
+index.feature-no-excel-license:
+  other: без лицензии на Excel
+index.feature-full-offline-functionality:
+  other: полностью работает без интернета
+index.feature-audience-readable-text:
+  other: читаемый текст для зрителей
+index.feature-instant-results:
+  other: мгновенные, экспортируемые результаты
+index.feature-rule-support:
+  other: поддержка правил многих федераций
+about.html-title:
+  other: О OpenLifter
+about.html-description:
+  other: Сравнение OpenLifter с другим программным обеспечением для пауэрлифтинга
+about.html-keywords:
+  other: сравнение openlifter
+about.comparison-chart:
+  other: Сравнительная таблица
+about.comparison-intro-1:
+  other: Вот простой способ сравнить OpenLifter с другими программами.
+about.comparison-intro-2:
+  other: Мы разработали следующую сравнительную таблицу после консультации с автором LiftingCast и считаем, что она является точной.
+about.table-header-openlifter:
+  other: OpenLifter
+about.table-header-liftingcast:
+  other: LiftingCast
+about.table-header-nextlifter:
+  other: NextLifter
+about.table-header-ironcomp:
+  other: "IronComp\n"
+about.table-row-homepage:
+  other: Домашняя страница
+about.table-row-homepage-none:
+  other: None
+about.table-row-license:
+  other: Лицензия
+about.table-row-license-agplv3p:
+  other: "\nFree (AGPLv3+)"
+about.table-row-license-freeware:
+  other: Freeware
+about.table-row-license-proprietary:
+  other: Собственность
+about.table-row-cost:
+  other: Стоимость
+about.table-row-cost-free:
+  other: Бесплатно
+about.table-row-cost-liftingcast:
+  other: Бесплатно (Premium $0,75/Спортсмен)
+about.table-row-cost-excel:
+  other: Лицензия Excel ($70/год)
+about.table-row-runs-on:
+  other: Работает на
+about.table-row-runs-on-any-browser:
+  other: Любом браузер
+about.table-row-runs-on-chrome:
+  other: Только Chrome
+about.table-row-runs-on-excel:
+  other: "\nMicrosoft Excel"
+about.table-row-runs-on-windows-mac:
+  other: "\nWindows и macOS"
+about.table-row-languages:
+  other: поддерживаемые языки
+about.table-row-languages-many:
+  other: много разных
+about.table-row-languages-english-only:
+  other: только английский
+about.table-row-works-offline:
+  other: Работает в офлайне
+about.table-row-screens-needed:
+  other: Необходимые экраны
+about.table-row-screens-needed-1-per:
+  other: 1 на платформу
+about.table-row-screens-needed-2p-per:
+  other: 2+ на платформу
+about.table-row-federations:
+  other: Федерации
+about.table-row-federations-all:
+  other: Все федерации
+about.table-row-federations-ipl-only:
+  other: Только IPL
+about.table-row-scoreboard:
+  other: Онлайн таблица результатов
+about.table-row-generic-yes-premium:
+  other: Да (с Premium)
+about.table-row-generic-no:
+  other: "Нет"
+about.table-row-generic-yes:
+  other: "Да"
+about.table-row-multi-platform:
+  other: Много-платформенный
+about.table-row-multi-platform-yes-usb:
+  other: Да (USB)
+about.table-row-autosave:
+  other: Автосохранение
+about.table-row-training:
+  other: Потребуется обучение
+about.table-row-training-minimal:
+  other: Минимальное
+about.table-row-training-moderate:
+  other: Средний
+about.table-row-training-moderate-issues:
+  other: Средняя (Проблемы)
+about.table-row-training-significant:
+  other: Значительное
+about.table-row-registration:
+  other: Регистрация
+about.table-row-registration-csv:
+  other: Автоматическое (CSV)
+about.table-row-registration-premium:
+  other: Автоматическое (с Premium)
+about.table-row-registration-manual:
+  other: Ручное
+about.about-section:
+  other: О OpenLifter
+about.start-info:
+  other: Проект OpenLifter был запущен в ноябре 2018 года <a href="https://www.openpowerlifting.org">командой OpenPowerlifting для продвижения передовых технологий в области конкурсного программного обеспечения.
+about.design-header:
+  other: OpenLifter предназначен для того, чтобы...
+about.design-goal-1:
+  other: быть первым в мире свободным и открытым программным обеспечением с открытым исходным кодом;
+about.design-goal-2:
+  other: быть первым в мире свободным и открытым соревновательным программным обеспечением с открытым исходным кодом;
+about.design-goal-3:
+  other: быть полностью защищены от крушения, используя единственное глобальное состояние;
+about.design-goal-4:
+  other: работать с одним проектором и одним дешевым компьютером под управлением любой операционной системы.
+about.design-goal-5:
+  other: сделать проекционный экран легко читаемым для зрителей
+about.closing-text:
+  other: У нас есть большой опыт в проведении соревнований по пауэрлифтингу, начиная от страхования и погрузки и заканчивая судейством и ведением таблиц показателей. Все что мы хотели от приложения по проведению соревнований по пауэрлифтингу, мы вложили в OpenLifter.
+guide.html-title:
+  other: Инструкция OpenLifter
+guide.html-meta-description:
+  other: Видео обзор OpenLifter ответы на часто задаваемые вопросы
+guide.html-meta-keywords:
+  other: openlifter guide,openlifter faq,openlifter tutorial
+guide.faq-section:
+  other: часто задаваемые вопросы
+guide.faq-pounds-question:
+  other: Поддерживает ли OpenLifter измерения в фунтах?
+guide.faq-pounds-answer:
+  other: Да.
+guide.faq-multiple-divisions-question:
+  other: Может ли один атлет находиться в нескольких дивизионах или дисциплинах?
+guide.faq-multiple-divisions-answer:
+  other: Да. На странице Регистрация поля Дивизион и Дисциплина могут принимать несколько значений для одного атлета. Первым введенным дивизионом будет та, которая отображается на экране Таблица Подходов.
+guide.faq-multiple-platforms-question:
+  other: Могу ли я иметь несколько платформ?
+guide.faq-multiple-platforms-answer:
+  other: "Да. Вам понадобится способ передачи файлов между компьютерами, обычно с помощью USB. Настройте соревнования и зарегистрируйте всех атлетов на одном компьютере, затем Сохранить с главного экрана. Перенесите сохраненный файл на компьютеры, расположенные рядом с каждой платформой, и загрузите его в OpenLifter. По окончании подъема на экране Результаты появятся кнопки Экспорт и Слияние для каждой платформы. Используйте USB для слияния экспортированных файлов. Тогда вы получите все результаты на одном компьютере и результаты будут включать все платформы.\n"
+guide.faq-changing-registration-later-question:
+  other: Если я изменю регистрационные данные после начала соревнований, все взорвется?
+guide.faq-changing-registration-later-answer:
+  other: Ничто не взорвется. OpenLifter позволяет изменять что угодно в любое время и сделает все правильно.
+guide.faq-rack-heights-question:
+  other: Как обозначить высоту брусьев безопасности на скамье для жима? А как насчет сведения/не сведения внутрь обоих вертикальных рычагов на стойке для приседания?
+guide.faq-rack-heights-answer:
+  other: На странице Взвешивания входы "Стойки Для Приседания" и "Скамья Для Жима" принимают текст произвольной формы, а не только цифры. Чаще всего высота стойки 5 и высота брусьев безопасности 3 записываются как "5/3", но вы можете использовать любое обозначения, которые выберут ассистенты. Аналогично, для стойки для приседания можно ввести "12в".
+guide.faq-fixing-lifts-question:
+  other: Как я могу исправить подход который был неправильно отмечен?
+guide.faq-fixing-lifts-answer:
+  other: Используйте элементы управления в нижнем левом углу страницы таблицы подходов для повторного выбора этого атлета, а затем нажмите кнопку Good Lift / Вес Взят или No Lift / Не Взят для его изменения.
+guide.faq-changing-rack-heights-question:
+  other: Как изменить высоту стойки? А как насчет первые попытки следующего потока?
+guide.faq-changing-rack-heights-answer:
+  other: На странице таблицы подходов нажмите кнопку "Взвешивания". Это вставит страницу Взвешивания на страницу таблицы подходов, так что вы сможете изменить все эти параметры и просматривать загрузку. После того, как вы закончите изменять настройки, нажмите кнопку "Взвешивания" еще раз, чтобы переключиться обратно.
+guide.faq-saving-frequency-question:
+  other: Как часто я должен сохранять данные в файл?
+guide.faq-saving-frequency-answer:
+  other: "Хорошим практическим методом является сохранение в файл непосредственно перед закрытием OpenLifter.</p><p><p> OpenLifter автоматически сохраняет в памяти браузера после каждого изменения. Если вы случайно закроете браузер, то при повторном открытии браузера все останется на месте. Но если вы не используете OpenLifter в течение нескольких дней, браузеры могут забыть обо всем, так что они могут забыть о вашей конкуренции (хотя это маловероятно). Если вы хотите гарантировать, что конкурс будет продолжаться еще несколько дней, сохраните его в файл. Не повредит.\n"
+guide.faq-lifting-text-question:
+  other: Текст на таблицы подходов слишком большой!
+guide.faq-lifting-text-answer:
+  other: Используйте кнопки "Увеличить" и "Уменьшить" вашего браузера, чтобы настроить параметры экрана. Большинство браузеров также позволяет изменять настройки масштабирования, удерживая нажатой клавишу Ctrl и прокручивая колесо мыши.
+guide.faq-results-text-question:
+  other: Текст на странице Результаты слишком маленький!
+guide.faq-results-text-answer:
+  other: Используйте те же функции браузера "Увеличить масштаб" и "Уменьшить масштаб", чтобы настроить все под себя. Если текст получится действительно большим, вы сможете поместить его в проектор и поместить на него экспромтом слайд-шоу по окончании соревнований. Похоже, зрителям это нравится, потому что это дает им возможность на что-то посмотреть.
+guide.faq-auto-import-registration-question:
+  other: Могу ли я автоматически импортировать данные о спортсмене на страницу регистрации?
+guide.faq-auto-import-registration-answer:
+  other: Да, экспортируя ваши данные в специальный CSV-формат импорта. В верхней части страницы Регистрация есть кнопка для загрузки шаблона, так что вы можете узнать, как выглядит этот формат на примере. Если формат не соответствует ожидаемому, появится полезное сообщение об ошибке. Как только вы узнаете (методом проб и ошибок), чего ожидает программа, следующий раз будет просто.
+guide.faq-online-scoresheet-question:
+  other: Существует ли онлайн-таблица результатов?
+guide.faq-online-scoresheet-answer:
+  other: Нет. После запуска OpenLifter он работает в офлайном режиме. Он работает на вашем компьютере, а не на нашем сервере.
+guide.faq-third-sex-question:
+  other: Я вижу весовые категории M, Ж и Все. Что такое "Все"?
+guide.faq-third-sex-answer:
+  other: Все - нейтральное в гендерном отношении название. Большинство федераций требуют от атлетов соревнования в мужской или женской категории. Некоторые федерации дополнительно разрешают атлетам входить в третью категорию. Все - это всё включено. Она может включать в себя не двоичных атлетов без принуждения к назначению в стандартную дихотомию. Если вы хотите провести соревнование, в котором все мужчины и женщины участвуют вместе, вы можете поместить всех в категорию Все.
+guide.faq-openpowerlifting-results-question:
+  other: Отправляются ли результаты автоматически в OpenPowerlifting?
+guide.faq-openpowerlifting-results-answer:
+  other: Нет. OpenPowerlifting требует, чтобы санкционирующая федерация удостоверяла результаты, поэтому результаты не могут быть получены напрямую. Однако, если вы нажмете кнопку "Экспорт для OpenPowerlifting" на странице Результаты, она загрузит результаты в формате, который будет <i>очень</i>  удобным для нас. Если вы хотите облегчить нам жизнь, <a href="https://www.openpowerlifting.org/contact">пришлите нам эти файлы</a>. Мы сможем добавить их после того, как санкционирующий орган одобрит их.
+guide.faq-warmup-room-question:
+  other: Как настроить мониторы для разминочной комнаты?
+guide.faq-warmup-room-answer:
+  other: Use desktop sharing software for your local network, and then share the screen. Chat programs with screen sharing features will work too.
+support.html-title:
+  other: Поддержка OpenLifter
+support.html-meta-description:
+  other: Support and Customization Options
+support.html-meta-keywords:
+  other: "помощь openlifter, поддержка openlifter, обучение openlifter "
+support.support-section:
+  other: Официальная поддержка
+support.no-warranty:
+  other: OpenLifter является бесплатным и с открытым исходным кодом, но не поставляется с гарантией или поддержкой.
+support.we-have-services:
+  other: Если вы хотите получить техническую поддержку для вашего соревнования, мы предлагаем несколько услуг &mdash; от обучения вас OpenLifter и проверки правильности настроек, вплоть до очного руководства и обучения вашего персонала
+support.contact-us-button:
+  other: Свяжитесь с нами
+support.customization-header:
+  other: "Персонализации "
+support.customization-subheader:
+  other: Получите версию OpenLifter специально для вашего соревнования
+support.customization-item-logo:
+  other: Проектируйте свой логотип!
+support.customization-item-branding:
+  other: Ваш собственный бренд
+support.customization-item-features:
+  other: Custom features
+support.customization-item-desktop:
+  other: Desktop versions
+support.customization-item-cost:
+  other: Starting at US$75
+support.customization-email-subject:
+  other: Custom Version Inquiry
+support.online-header:
+  other: Online Support
+support.online-subheader:
+  other: Проводите соревнования с полной технической уверенностью
+support.online-item-training:
+  other: Обучение вашего персонала
+support.online-item-email:
+  other: Неограниченная поддержка по электронной почте
+support.online-item-phone:
+  other: Телефонная поддержка в день соревнований
+support.online-item-cost:
+  other: "Начиная от $120 "
+support.online-email-subject:
+  other: Online Support Inquiry
+support.in-person-header:
+  other: In-Person Support
+support.in-person-subheader:
+  other: Закажите команду из OpenPowerlifting работать как жюри.
+support.in-person-item-everything:
+  other: Мы сделаем все!
+support.in-person-item-training:
+  other: Мы также проведем обучение вашего персонала.
+support.in-person-item-worldwide:
+  other: Доступен по всему миру
+support.in-person-item-cost:
+  other: Цены в зависимости от стоимости поездки, пожалуйста спрашивайте.
+support.in-person-email-subject:
+  other: In-Person Support
+releases.html-title:
+  other: Выпуски OpenLifter
+releases.html-meta-description:
+  other: Все версии OpenLifter, включая старые выпуски
+releases.html-meta-keywords:
+  other: старые версии openlifter
+releases.in-development:
+  other: В процессе развития
+releases.major-changes-in-the-next-version:
+  other: Важнейшие изменения ожидаются в следующей версии
+releases.changelog-initial-public-release:
+  other: Первоначальное публичное издание.
+guide.faq-lot-numbers-question:
+  other: Что такое номер порядка?
+guide.faq-lot-numbers-answer:
+  other: Номер порядка - один из способов определения того, кто будет первым, когда два атлета заявили одинаковый вес. Спортсмен с меньшим номером подходит первым. Как правило, номер порядка присваиваются директором турнира в порядке регистрации. </p><p> Использование номера порядков является абсолютно необязательным. Если вы не используете их, OpenLifter будет использовать тот же относительный порядок, что и в предыдущем подходи . Это работает очень хорошо и соответствует ожиданиям атлетов. Если ваша федерация не требует номера порядков, мы рекомендуем не использовать их.

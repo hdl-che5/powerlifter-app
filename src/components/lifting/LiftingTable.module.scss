@@ -1,0 +1,137 @@
+// vim: set ts=2 sts=2 sw=2 et:
+//
+// This file is part of OpenLifter, simple Powerlifting meet software.
+// Copyright (C) 2019 The OpenPowerlifting Project.
+//
+// This program is free software: you can redistribute it and/or modify
+// it under the terms of the GNU Affero General Public License as
+// published by the Free Software Foundation, either version 3 of the
+// License, or (at your option) any later version.
+//
+// This program is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU Affero General Public License for more details.
+//
+// You should have received a copy of the GNU Affero General Public License
+// along with this program.  If not, see <https://www.gnu.org/licenses/>.
+
+// Theming for the main table on the Lifting page.
+// The rest of the project uses Bootstrap tables, but since the Lifting page
+// needs to be carefully designed, and doesn't need mobile support,
+// it gets its own direct styling.
+
+$row-height: 40px;
+$cell-left-padding: 8px;
+$row-font-size: 20px;
+$header-font-size: 20px;
+
+$color-dark: #232323;
+$color-light: #ffffff;
+$color-alternating-stripe: #f4f4f4;
+
+$color-active: lightblue;
+
+$color-light-red-tint: #ffeeee;
+$color-light-red-tint-stripe: #ffe3e3;
+$color-light-green-tint: #eeffee;
+$color-light-green-tint-stripe: #e3ffe3;
+
+$border-rounding: 8px;
+
+// Set the default colors.
+table.liftingtable {
+  width: 100%; // Occupy the entirety of the containing div.
+
+  color: $color-dark;
+  background-color: $color-light;
+
+  font-size: $row-font-size;
+  box-shadow: 0 0 20px 0 hsla(0, 0%, 64%, 0.45);
+  border-radius: $border-rounding;
+}
+
+// A cell helper to prevent text wrapping.
+.liftingtable td.textCell {
+  max-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.liftingtable th.smallCell {
+  width: 72px;
+}
+.liftingtable th.spacerCell {
+  width: 16px; // Values below 16 are ignored.
+  background-color: $color-light;
+}
+.liftingtable td.spacerCell {
+  background-color: $color-light;
+}
+.liftingtable th.activeColumn {
+  width: 72px;
+  color: $color-dark;
+  background-color: $color-active;
+}
+
+// The header bar gets inverse colors.
+// th is styled instead of thead to allow rounded corners.
+.liftingtable th {
+  color: $color-light;
+  background-color: $color-dark;
+  font-size: $header-font-size;
+  font-weight: bold;
+}
+
+// Cell alignment stuff.
+.liftingtable td,
+.liftingtable th {
+  height: $row-height;
+  padding: 0px $cell-left-padding 0px $cell-left-padding;
+}
+.liftingtable td.attemptInputCell {
+  padding: 0px;
+}
+
+// Make the table striped.
+.liftingtable tr:nth-child(even) {
+  background-color: $color-alternating-stripe;
+}
+
+// Rounded corners.
+.liftingtable th:first-child {
+  border-top-left-radius: $border-rounding;
+}
+.liftingtable th:last-child {
+  border-top-right-radius: $border-rounding;
+}
+.liftingtable tr:last-child td:first-child {
+  border-bottom-left-radius: $border-rounding;
+}
+.liftingtable tr:last-child td:last-child {
+  border-bottom-right-radius: $border-rounding;
+}
+
+// Decoration for the current lifter's row.
+.liftingtable tr.current {
+  background-color: $color-active;
+}
+
+// A lifting cell marked "Good Lift".
+.liftingtable td.goodlift {
+  background-color: $color-light-green-tint;
+  color: green;
+}
+// A lifting cell marked "No Lift".
+.liftingtable td.nolift {
+  background-color: $color-light-red-tint;
+  color: red;
+}
+
+input.attemptInput {
+  font-size: $row-font-size;
+  border-radius: 0px;
+  height: $row-height;
+  padding-left: $cell-left-padding;
+}

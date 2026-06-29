@@ -1,0 +1,203 @@
+// Theming for the Rusty classes.
+
+body {
+  margin: 20px;
+}
+
+ul {
+  padding-left: 30px;
+}
+li {
+  margin-bottom: .5em;
+}
+
+// Styles for the menu at the top of the index page.
+ul.menu {
+  font-size: 1em;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+ul.menu li {
+  list-style-type: none;
+  margin-top: 0em;
+  margin-bottom: 0em;
+}
+ul.menu li.icon {
+  display: flex;
+  justify-content: center;
+}
+ul.menu li.menu {
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+ul.menu h2 {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0.9em;
+  display: inline;
+  line-height: 1.5em;
+}
+.row-spacer {
+  margin-top: 2em;
+}
+
+// "Pitch" row.
+p.pitch {
+  font-size: 25px;
+  font-weight: 300;
+  text-align: center;
+}
+@media only screen and (min-width: 992px) {
+  p.pitch {
+    margin-right: 1em;
+    text-align: left;
+  }
+
+  // On the "Support" page for large screens, set the height of the <ul>
+  // element so that the "Contact Us" buttons below are vertically aligned.
+  div.support-card ul.laundry-list {
+    height: 160px;
+  }
+}
+.pitch-row .release-version > span {
+  font-weight: bold;
+}
+
+// The release button, on the index and releases pages.
+.release-button {
+  display: block;
+  color: white;
+  background-color: #428BCA;
+  border-radius: 3px;
+  padding: 1.25rem;
+  margin-top: 0.825rem;
+  font-size: 21px;
+  text-align: center;
+}
+a.release-button:hover, a.release-button:focus {
+  color: white;
+}
+.release-date {
+  text-align: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+// The beta button, on the releases page.
+.beta-button {
+  background-color: #9942ca; // purple
+}
+
+// "Code" row.
+.code-row h2 {
+  font-weight: bold;
+  font-size: 18.5px;
+}
+.laundry-list {
+  font-size: 16px;
+  list-style-type: square;
+}
+ul.laundry-list {
+  column-count: 2;
+  margin-bottom: 20px;
+}
+@media only screen and (min-width: 992px) {
+  ul.laundry-list {
+    column-count: auto;
+  }
+}
+#example-image {
+  position: relative;
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #CCC;
+  background-color: #E0E0E0;
+}
+
+// Standard elements.
+footer {
+  font-size: 0.9rem;
+  border-top: 2px solid #dedede;
+  margin: 1.75rem auto 0 auto;
+  padding-top: 0.75rem;
+}
+footer p {
+  margin-top: 1.2em;
+  margin-bottom: 1.2em;
+}
+footer a {
+  display: inline-block;
+  font-weight: bold;
+}
+
+// Cards on the Support page.
+div.support-card {
+  margin-bottom: 60px; // Separates the cards on small screens.
+}
+
+.support-card h3 {
+  display: block;
+  font-weight: bold;
+  text-align: center;
+}
+.support-card h4 {
+  display: block;
+  text-align: center;
+  margin-bottom: 1.5em;
+  font-size: 1.25rem;
+}
+
+.support-button {
+  display: block;
+  color: white;
+  background-color: #428BCA;
+  border-radius: 3px;
+  padding: 1rem;
+  margin-top: 1em;
+  font-size: 1.25em;
+  text-align: center;
+}
+a.release-button:hover, a.release-button:focus {
+  color: white;
+}
+
+// FAQ page stuff.
+ul.faq li {
+  list-style-type: none;
+}
+ul.faq li h3 {
+  font-size: 20px;
+  font-weight: bold;
+}
+ul.faq li p {
+  margin-left: 15px;
+}
+ul.faq li p + p {
+  margin-top: -0.5rem;
+}
+
+// Bootstrap 4 sets a top border, which looks pretty gross.
+.table th {
+  border-top: none;
+}
+.table td.success {
+  background-color: #dff0d8; // A pleasant green.
+}
+.table-hover > tbody > tr:hover > td.success {
+  background-color: #d0e9c6; // A more vivacious green.
+}
+.table td.warning {
+  background-color: #fcf8e3; // A pleasant yellow.
+}
+.table-hover > tbody > tr:hover > td.warning {
+  background-color: #faf2cc; // A more vivacious yellow.
+}
+.table td.danger {
+  background-color: #f2dede; // A pleasant red.
+}
+.table-hover > tbody > tr:hover > td.danger {
+  background-color: #ebcccc; // A more vivacious red.
+}
