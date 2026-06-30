@@ -111,6 +111,26 @@ export function emitUpdateCurrentLift(data: {
   liftType?: string;
   attemptNumber?: number;
   weightKg?: number;
+  currentAthlete?: {
+    id?: number;
+    name?: string;
+    bodyweightKg?: number;
+    category?: string;
+    lot?: number;
+    team?: string;
+    athletePhotoUrl?: string;
+    clubLogoUrl?: string;
+  };
+  nextAthlete?: {
+    id?: number;
+    name?: string;
+    bodyweightKg?: number;
+    category?: string;
+    lot?: number;
+    team?: string;
+    athletePhotoUrl?: string;
+    clubLogoUrl?: string;
+  };
 }) {
   getSocket().emit("update_current_lift", data);
 }

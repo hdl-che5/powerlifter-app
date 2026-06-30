@@ -25,6 +25,7 @@ app.get("/api/health", (req, res) => res.json({ ok: true, ts: Date.now() }));
 let liveState = {
   competitionId: null,
   currentAthlete: null,
+  nextAthlete: null,
   currentLift: "S",
   currentAttempt: 1,
   requestedWeightKg: 0,
@@ -156,7 +157,10 @@ io.on("connection", (socket) => {
   });
 
   socket.on("update_current_lift", (data) => {
-    liveState.currentAthlete = data.athleteName ? { id: data.athleteId, name: data.athleteName } : null;
+    liveState.currentAthlete =
+      data.currentAthlete ||
+      (data.athleteName ? { id: data.athleteId, name: data.athleteName } : null);
+    liveState.nextAthlete = data.nextAthlete || null;
     if (data.liftType) liveState.currentLift = data.liftType;
     if (data.attemptNumber) liveState.currentAttempt = data.attemptNumber;
     if (data.weightKg !== undefined) liveState.requestedWeightKg = data.weightKg;

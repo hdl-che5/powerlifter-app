@@ -79,6 +79,15 @@ interface LastEmittedLiftState {
     athletePhotoUrl?: string;
     clubLogoUrl?: string;
   };
+  nextAthlete?: {
+    name?: string;
+    bodyweightKg?: number;
+    category?: string;
+    lot?: number;
+    team?: string;
+    athletePhotoUrl?: string;
+    clubLogoUrl?: string;
+  };
 }
 
 class LiftingView extends React.Component<Props, InternalState> {
@@ -139,6 +148,8 @@ class LiftingView extends React.Component<Props, InternalState> {
           liftType: this.lastEmittedLiftState.liftType ?? this.props.lifting.lift,
           attemptNumber: this.lastEmittedLiftState.attemptNumber ?? now.attemptOneIndexed,
           weightKg: this.lastEmittedLiftState.weightKg ?? 0,
+          currentAthlete: this.lastEmittedLiftState.currentAthlete,
+          nextAthlete: this.lastEmittedLiftState.nextAthlete,
         });
       } else {
         emitUpdateCurrentLift({
@@ -151,6 +162,7 @@ class LiftingView extends React.Component<Props, InternalState> {
     }
 
     const entry = this.props.entriesInFlight.find((x) => x.id === now.currentEntryId);
+    const nextEntry = now.nextEntryId ? this.props.entriesInFlight.find((x) => x.id === now.nextEntryId) : undefined;
     const weightKg = entry ? entry[liftToAttemptFieldName(this.props.lifting.lift)][now.attemptOneIndexed - 1] : 0;
     const payload: LastEmittedLiftState = {
       athleteId: entry?.id,
@@ -161,6 +173,7 @@ class LiftingView extends React.Component<Props, InternalState> {
       currentAthlete:
         entry && entry.id != null
           ? {
+              id: entry.id,
               name: entry.name,
               bodyweightKg: entry.bodyweightKg,
               category: entry.sex,
@@ -168,6 +181,19 @@ class LiftingView extends React.Component<Props, InternalState> {
               team: entry.team,
               athletePhotoUrl: entry.athletePhotoUrl,
               clubLogoUrl: entry.clubLogoUrl,
+            }
+          : undefined,
+      nextAthlete:
+        nextEntry && nextEntry.id != null
+          ? {
+              id: nextEntry.id,
+              name: nextEntry.name,
+              bodyweightKg: nextEntry.bodyweightKg,
+              category: nextEntry.sex,
+              lot: nextEntry.lot,
+              team: nextEntry.team,
+              athletePhotoUrl: nextEntry.athletePhotoUrl,
+              clubLogoUrl: nextEntry.clubLogoUrl,
             }
           : undefined,
     };
